@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Game of Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- create a 10 x 10 grid on start
+  randomly populate cells
+  draw grid -->
+
+  <div class="flex-container main">
+    <div class="board">
+        <div class="flex-container row-1">
+        <div class="square alice">.</div>
+        <div class="square bob">.</div>
+        <div class="square charlie">.</div>
+        <div class="square dan">.</div>
+        <div class="square eric">.</div>
+        <div class="square frank">.</div>
+        <div class="square george">.</div>
+        <div class="square harold">.</div>
+        <div class="square imogen">.</div>
+        <div class="square jake">.</div>
+        <div class="square karla">.</div>
+        <div class="square lyle">.</div>
+        <div class="square monte">.</div>
+        <div class="square nick">.</div>
+        <div class="square octavia">.</div>
+        <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-2">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-3">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-4">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-5">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-6">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-7">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-8">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-9">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-10">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-11">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-12">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-13">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-14">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-15">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+
+        <div class="flex-container row-16">
+          <div class="square alice">.</div>
+          <div class="square bob">.</div>
+          <div class="square charlie">.</div>
+          <div class="square dan">.</div>
+          <div class="square eric">.</div>
+          <div class="square frank">.</div>
+          <div class="square george">.</div>
+          <div class="square harold">.</div>
+          <div class="square imogen">.</div>
+          <div class="square jake">.</div>
+          <div class="square karla">.</div>
+          <div class="square lyle">.</div>
+          <div class="square monte">.</div>
+          <div class="square nick">.</div>
+          <div class="square octavia">.</div>
+          <div class="square penelope">.</div>
+        </div>
+    </div>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

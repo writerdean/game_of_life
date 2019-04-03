@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+height: 100%;
+}
+
+.board {
+height: 50%;
+width: 100%;
+}
+
+.alive {
+  background-color: black;
+  }
+
+.square {
+border: 1px solid black;
+height: 100%;
+width: 25%;
+background-color: white;
+}
+
+.container {
+/* border-top: 1px solid black;
+border-right: 1px solid black; */
+height: 100%;
+width: 25%;
+}
+
+.dead {
+background-color: white;
+}
+
+.row-1, .row-9{
+    border: 5px solid red;
+  }
+
+.row-3, .row-12{
+    border: 5px solid green;
+  }
+
+.row-6, .row-15{
+    border: 5px solid yellow;
+  }
+
+.main {
+    border: 5px solid blue;
+  }
+
+  /* .row-sixteen .alice {
+    background-color: red;
+  } */
